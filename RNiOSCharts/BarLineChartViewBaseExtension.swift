@@ -276,6 +276,10 @@ extension BarLineChartViewBase {
                 self.leftAxis.drawLabelsEnabled = json["leftAxis"]["drawLabels"].boolValue;
             }
 
+            if json["leftAxis"]["labelCount"].isExists() {
+                self.leftAxis.setLabelCount(json["leftAxis"]["labelCount"].intValue, force: false);
+            }
+
             if json["leftAxis"]["textColor"].isExists() {
                 self.leftAxis.labelTextColor = RCTConvert.UIColor(json["leftAxis"]["textColor"].intValue);
             }
@@ -467,6 +471,10 @@ extension BarLineChartViewBase {
 
             if json["rightAxis"]["textColor"].isExists() {
                 self.rightAxis.labelTextColor = RCTConvert.UIColor(json["rightAxis"]["textColor"].intValue);
+            }
+
+            if json["rightAxis"]["labelCount"].isExists() {
+                self.rightAxis.setLabelCount(json["rightAxis"]["labelCount"].intValue, force: false);
             }
 
             if json["rightAxis"]["textFontName"].isExists() {

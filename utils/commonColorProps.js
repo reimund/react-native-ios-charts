@@ -33,6 +33,10 @@ export const processColors = (props) => {
     config.backgroundColor = processColor(config.backgroundColor);
   }
 
+  if ('borderColor' in config) {
+    config.borderColor = processColor(config.borderColor);
+  }
+
   if ('gridBackgroundColor' in config) {
     config.gridBackgroundColor = processColor(config.gridBackgroundColor);
   }

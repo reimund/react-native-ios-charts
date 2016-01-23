@@ -89,6 +89,10 @@ extension BarLineChartViewBase {
                 self.xAxis.drawLabelsEnabled = json["xAxis"]["drawLabels"].boolValue;
             }
 
+            if json["xAxis"]["spaceBetweenLabels"].isExists() {
+                self.xAxis.spaceBetweenLabels = json["xAxis"]["spaceBetweenLabels"].intValue;
+            }
+
             if json["xAxis"]["textColor"].isExists() {
                 self.xAxis.labelTextColor = RCTConvert.UIColor(json["xAxis"]["textColor"].intValue);
             }
